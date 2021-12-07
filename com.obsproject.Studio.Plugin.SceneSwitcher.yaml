@@ -30,12 +30,13 @@ modules:
       - -DLIBOBS_FRONTEND_API_LIB=/app/lib/libobs-frontend-api.so
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
-      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}
+      - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
+        ${FLATPAK_ID}
     sources:
       - type: git
         url: https://github.com/WarmUpTill/SceneSwitcher.git
-        tag: 1.16.4
-        commit: 5dfed8ac2ae27289d79f7900be460188aba747ab
+        tag: 1.16.5
+        commit: 82da6b32175081a3c8ca9c3aeed267999f460dcb
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)
