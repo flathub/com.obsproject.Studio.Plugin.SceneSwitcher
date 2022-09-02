@@ -2,7 +2,7 @@ id: com.obsproject.Studio.Plugin.SceneSwitcher
 branch: stable
 runtime: com.obsproject.Studio
 runtime-version: stable
-sdk: org.kde.Sdk//5.15-21.08
+sdk: org.kde.Sdk//6.3
 build-extension: true
 separate-locales: false
 appstream-compose: false
@@ -22,12 +22,8 @@ modules:
   - name: advanced-scene-switcher
     buildsystem: cmake-ninja
     config-opts:
-      - -DBUILD_OUT_OF_TREE=1
       - -DCMAKE_BUILD_TYPE=Release
-      - -DLIBOBS_INCLUDE_DIR=/app/include/obs
-      - -DLIBOBS_LIB=/app/lib/libobs.so
-      - -DLIBOBS_FRONTEND_INCLUDE_DIR=/app/include/obs
-      - -DLIBOBS_FRONTEND_API_LIB=/app/lib/libobs-frontend-api.so
+      - -DLINUX_PORTABLE=OFF
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
       - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
