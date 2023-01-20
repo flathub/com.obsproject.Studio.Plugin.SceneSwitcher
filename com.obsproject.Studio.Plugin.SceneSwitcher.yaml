@@ -31,8 +31,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/WarmUpTill/SceneSwitcher.git
-        tag: 1.20.1
-        commit: cb87f1cc362a61a2921eb17fff72789d47e20184
+        tag: 1.20.2
+        commit: 438c54599ec50256e114ed9a64e82818e30d0ed3
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)
