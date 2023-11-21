@@ -2,7 +2,7 @@
 <component type="addon">
   <id>com.obsproject.Studio.Plugin.SceneSwitcher</id>
   <extends>com.obsproject.Studio</extends>
-  <name>Advanced Scene Switcher Plugin</name>
+  <name>Advanced Scene Switcher</name>
   <summary>An advanced automated scene switcher for OBS Studio</summary>
   <url type="homepage">https://github.com/WarmUpTill/SceneSwitcher</url>
   <metadata_license>CC0-1.0</metadata_license>
