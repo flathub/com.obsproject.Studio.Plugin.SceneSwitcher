@@ -21,18 +21,20 @@ modules:
         commit: 4223495e6cd67011f86b8ecd9be1fa105018f3b1
   - name: advanced-scene-switcher
     buildsystem: cmake-ninja
+    builddir: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DLINUX_PORTABLE=OFF
+      - -DCMAKE_CXX_FLAGS="-Wno-error=stringop-overflow"
     post-install:
-      - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo ${FLATPAK_BUILDER_BUILDDIR}/${FLATPAK_ID}.metainfo.xml
       - appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak
         ${FLATPAK_ID}
     sources:
       - type: git
         url: https://github.com/WarmUpTill/SceneSwitcher.git
-        tag: 1.24.2
-        commit: 267855fded058e22e682bf2888c822fb419d8b55
+        tag: 1.25.0
+        commit: 8271a6e8db465b743410dbd58562e9659ebca496
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
