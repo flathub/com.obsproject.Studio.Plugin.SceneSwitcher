@@ -9,6 +9,24 @@ appstream-compose: false
 build-options:
   prefix: /app/plugins/SceneSwitcher
 modules:
+  - name: libusb
+    buildsystem: autotools
+    builddir: true
+    sources:
+      - type: git
+        url: https://github.com/libusb/libusb.git
+        tag: v1.0.29
+        commit: 15a7ebb4d426c5ce196684347d2b7cafad862626
+  - name: paho-mqtt-cpp
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+     - -DPAHO_WITH_MQTT_C=ON
+    sources:
+      - type: git
+        url: https://github.com/eclipse-paho/paho.mqtt.cpp.git
+        tag: v1.5.2
+        commit: 165476b1dc248b3f4480f05646086326e1d7d82e
   - name: opencv
     buildsystem: cmake-ninja
     builddir: true
