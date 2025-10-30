@@ -21,7 +21,7 @@ modules:
     buildsystem: cmake-ninja
     builddir: true
     config-opts:
-     - -DPAHO_WITH_MQTT_C=ON
+      - -DPAHO_WITH_MQTT_C=ON
     sources:
       - type: git
         url: https://github.com/eclipse-paho/paho.mqtt.cpp.git
@@ -51,8 +51,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/WarmUpTill/SceneSwitcher.git
-        tag: 1.32.1
-        commit: d55bb6bc8658599354aa5fb3e528cd75254fb604
+        tag: 1.32.2
+        commit: e1020a190932e2618e1ad52894e2861103c40ab7
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
