@@ -2,7 +2,7 @@ id: com.obsproject.Studio.Plugin.SceneSwitcher
 branch: stable
 runtime: com.obsproject.Studio
 runtime-version: stable
-sdk: org.kde.Sdk//6.8
+sdk: org.freedesktop.Sdk//25.08
 build-extension: true
 separate-locales: false
 build-options:
@@ -24,8 +24,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/eclipse-paho/paho.mqtt.cpp.git
-        tag: v1.5.2
-        commit: 165476b1dc248b3f4480f05646086326e1d7d82e
+        tag: v1.6.0
+        commit: c0b43a49d7b7e7b5e7009658ca22f19ac1112c83
   - name: opencv
     buildsystem: cmake-ninja
     builddir: true
@@ -48,8 +48,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/WarmUpTill/SceneSwitcher.git
-        tag: 1.32.8
-        commit: f35ef558eee4f4446a0a170e2ea4a9b03382086a
+        tag: 1.32.9
+        commit: 8e2c466c2db9cdc66bd38ff39c7f84e861af85ca
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
